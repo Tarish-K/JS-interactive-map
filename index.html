@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Interactive Map</title>
+    <title>Geolocation Project</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="./map.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <style>
+    #map { 
+        height: 700px;
+        background-color: rgb(204, 204, 204);
+    }
+    #map::before{
+        content: 'LOADING';
+        font-size: 3em;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        margin-top: 3em;
+    }
+    .leaflet-popup-content-wrapper {
+        width: 100%;
+    }
+  </style>
 </head>
-
 <body>
+    <form>
+        <select id="business">
+            <option value="Burger">Burger</option>
+            <option value="Ice cream">Ice cream</option>
+            <option value="Hotdog">Hotdog</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Drinks">Drinks</option>
+        </select>
+        <button id="submit">Submit</button>
+    </form>
+    <div id="map"></div>
 </body>
-
 </html>
